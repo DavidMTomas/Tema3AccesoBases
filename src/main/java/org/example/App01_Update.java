@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class App02 {
+public class App01_Update {
     public static final String URL = "jdbc:mysql://localhost/adt3_ejemplo1";
     public static final String USER = "root";
     public static final String PWD = "";

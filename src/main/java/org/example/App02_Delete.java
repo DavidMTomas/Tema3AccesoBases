@@ -1,0 +1,35 @@
+package org.example;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class App02_Delete {
+
+    public static final String URL="jdbc:mysql://localhost/adt3_ejemplo1";
+    public static final String USER = "root";
+    public static final String PWD = "";
+    public static void main(String[] args) {
+
+        try (Connection conexion = DriverManager.getConnection(URL, USER, PWD)) {
+
+        String sql= "Delete from articulos where stock < ?";
+
+
+        PreparedStatement sentencia= conexion.prepareStatement(sql);
+        sentencia.setInt(1,0);
+
+        int filas = sentencia.executeUpdate();
+
+            System.out.println("Filas borraadas: "+filas);
+
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+}

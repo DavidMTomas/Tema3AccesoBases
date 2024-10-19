@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class PracticaStatement {
     public static void main(String[] args) {
 
-        try (Connection conexion = DriverManager.getConnection(App01.URL, App01.USER, App01.PWD)) {
+        try (Connection conexion = DriverManager.getConnection(App01_Insert.URL, App01_Insert.USER, App01_Insert.PWD)) {
 
 
           //insertarValor(conexion);
